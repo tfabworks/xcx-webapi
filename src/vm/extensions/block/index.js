@@ -165,7 +165,7 @@ class ExtensionBlocks {
     async getWebapiJsonContents(args) {
         const url = Cast.toString(args.URL);
         const name = Cast.toString(args.NAME);
-	const json = await(fetch(url, {headers: {'Accept': 'application/json'}}).then(response => response.json()).catch(e => {}));
+	const json = await(fetch(url, {mode: 'cors', headers: {'Accept': 'application/json'}}).then(response => response.json()).catch(e => {}));
         //log.log(`getWebapiJsonContents: fetch ${url} to ${name}`);
 	this.responseData[name] = json;
     }
