@@ -98,6 +98,8 @@ class ExtensionBlocks {
             // Replace 'formatMessage' to a formatter which is used in the runtime.
             formatMessage = runtime.formatMessage;
         }
+
+	this.responseData = {};
     }
 
     /**
@@ -113,19 +115,44 @@ class ExtensionBlocks {
             showStatusButton: false,
             blocks: [
                 {
-                    opcode: 'do-it',
+                    opcode: 'getWebapiJsonContents',
+                    blockType: BlockType.COMMAND,
+                    blockAllThreads: false,
+                    text: formatMessage({
+                        id: 'webapiExtension.getWebapiJsonContents',
+                        default: 'get [URL] and name as [NAME]',
+                        description: 'retrive json contents from specified URL'
+                    }),
+                    func: 'getWebapiJsonContents',
+                    arguments: {
+                        URL: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'https://httpbin.org/get'
+                        },
+                        NAME: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'DATA'
+                        }
+                    }
+                },
+                {
+                    opcode: 'readWebapiJsonContents',
                     blockType: BlockType.REPORTER,
                     blockAllThreads: false,
                     text: formatMessage({
-                        id: 'webapiExtension.doIt',
-                        default: 'do it [SCRIPT]',
-                        description: 'execute javascript for example'
+                        id: 'webapiExtension.readWebapiJsonContents',
+                        default: 'read [QUERY] from [NAME]',
+                        description: 'read json contents by name'
                     }),
-                    func: 'doIt',
+                    func: 'readWebapiJsonContents',
                     arguments: {
-                        SCRIPT: {
+                        QUERY: {
                             type: ArgumentType.STRING,
-                            defaultValue: '3 + 4'
+                            defaultValue: '.headers.Referer'
+                        },
+                        NAME: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'DATA'
                         }
                     }
                 }
@@ -135,11 +162,67 @@ class ExtensionBlocks {
         };
     }
 
-    doIt (args) {
-        const statement = Cast.toString(args.SCRIPT);
-        const func = new Function(`return (${statement})`);
-        log.log(`doIt: ${statement}`);
-        return func.call(this);
+    async getWebapiJsonContents(args) {
+        const url = Cast.toString(args.URL);
+        const name = Cast.toString(args.NAME);
+	const response = await(fetch(url));
+	const json = await(response.json());
+        log.log(`getWebapiJsonContents: fetch ${url} to ${name} response ${response.status}`);
+	this.responseData[name] = json;
+    }
+
+    readWebapiJsonContents(args) {
+        const query = Cast.toString(args.QUERY);
+        const name = Cast.toString(args.NAME);
+	const data = this.responseData[name];
+	const keys = query.split('.').map(s => s.trim().replace(/^\[/, '').replace(/\]$/, '')).filter(s => s != '');
+        log.log(`readWebapiJsonContents: ${query} ${name}`, keys);
+
+	const lookup = keys.reduce((d, key) => {
+	    switch(typeof d.value) {
+	    case "undefined":
+		return d;
+	    case "object":
+		if(d.value === null) {
+		    return {"error": `cannot lookup ${key} ` + JSON.stringify(d.value, null, 2)}
+		} else if(Array.isArray(d.value)) {
+		    const index = key == 'first' ? 0 : (key == 'last' ? (d.value.length - 1) : (parseInt(key)));
+		    if(0 <= index && index < d.value.length) {
+			return {"value": d.value[index]};
+		    } else {
+			return {"error": `invalid index ${index} length ${d.value.length}`}
+		    }
+		} else {
+		    if(typeof d.value[key] !== 'undefined') {
+			return {"value": d.value[key]};
+		    } else {
+			return {"error": `cannot lookup ${key} ` + JSON.stringify(d.value, null, 2)}
+		    }
+		}
+	    default:
+		return {"error": `cannot lookup ${key} ` + JSON.stringify(d.value, null, 2)}
+	    }
+	}, {"value": data});
+
+	if(typeof lookup.error != 'undefined') {
+	    log.log(lookup.error);
+	    return '';
+	} else {
+	    switch(typeof lookup.value) {
+	    case "boolean":
+	    case "number":
+	    case "bigint":
+	    case "string":
+		return lookup.value;
+	    case "undefined":
+		return '';
+	    default:
+		return JSON.stringify(lookup.value, null, 2);
+	    }
+	}
+    }
+
+    asccessJson(json, keys) {
     }
 }
 
