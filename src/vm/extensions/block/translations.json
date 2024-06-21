@@ -1,0 +1,14 @@
+{
+  "en": {
+    "webapiExtension.name": "WebAPI Extension",
+    "webapiExtension.doIt": "do it [SCRIPT]"
+  },
+  "ja": {
+    "webapiExtension.name": "WebAPI Extension",
+    "webapiExtension.doIt": "[SCRIPT] を実行する"
+  },
+  "ja-Hira": {
+    "webapiExtension.name": "WebAPI Extension",
+    "webapiExtension.doIt": "[SCRIPT] をじっこうする"
+  }
+}

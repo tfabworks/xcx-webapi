@@ -1,0 +1,14 @@
+{
+  "en": {
+    "webapiExtension.entry.name": "WebAPI Extension",
+    "webapiExtension.entry.description": "Description of this extension"
+  },
+  "ja": {
+    "webapiExtension.entry.name": "WebAPI Extension",
+    "webapiExtension.entry.description": "拡張機能の説明"
+  },
+  "ja-Hira": {
+    "webapiExtension.entry.name": "WebAPI Extension",
+    "webapiExtension.entry.description": "かくちょうきのうのせつめい"
+  }
+}
