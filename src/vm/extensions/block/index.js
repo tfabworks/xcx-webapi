@@ -174,6 +174,7 @@ class ExtensionBlocks {
         const query = Cast.toString(args.QUERY);
         const name = Cast.toString(args.NAME);
 	const data = this.responseData[name];
+	const toHalfnums = text => text;
 	const keys = query.split('.').map(s => s.trim().replace(/^\[/, '').replace(/\]$/, '')).filter(s => s != '');
         //log.log(`readWebapiJsonContents: ${query} ${name}`, keys);
 
@@ -185,7 +186,10 @@ class ExtensionBlocks {
 		if(d.value === null) {
 		    return {"error": `cannot lookup ${key} ` + JSON.stringify(d.value, null, 2)}
 		} else if(Array.isArray(d.value)) {
-		    const index = key == 'first' ? 0 : (key == 'last' ? (d.value.length - 1) : (parseInt(key)));
+		    const index =
+			  key == 'first' ? 0 :
+			  (key == 'last' ? (d.value.length - 1) :
+			   (parseInt(key.replace(/[０-９]/g, m => '０１２３４５６７８９'.indexOf(m)))));
 		    if(0 <= index && index < d.value.length) {
 			return {"value": d.value[index]};
 		    } else {
