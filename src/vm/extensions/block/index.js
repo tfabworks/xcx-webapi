@@ -165,9 +165,8 @@ class ExtensionBlocks {
     async getWebapiJsonContents(args) {
         const url = Cast.toString(args.URL);
         const name = Cast.toString(args.NAME);
-	const response = await(fetch(url));
-	const json = await(response.json());
-        log.log(`getWebapiJsonContents: fetch ${url} to ${name} response ${response.status}`);
+	const json = await(fetch(url).then(response => response.json()).catch(e => {}));
+        //log.log(`getWebapiJsonContents: fetch ${url} to ${name}`);
 	this.responseData[name] = json;
     }
 
@@ -176,7 +175,7 @@ class ExtensionBlocks {
         const name = Cast.toString(args.NAME);
 	const data = this.responseData[name];
 	const keys = query.split('.').map(s => s.trim().replace(/^\[/, '').replace(/\]$/, '')).filter(s => s != '');
-        log.log(`readWebapiJsonContents: ${query} ${name}`, keys);
+        //log.log(`readWebapiJsonContents: ${query} ${name}`, keys);
 
 	const lookup = keys.reduce((d, key) => {
 	    switch(typeof d.value) {
@@ -205,7 +204,7 @@ class ExtensionBlocks {
 	}, {"value": data});
 
 	if(typeof lookup.error != 'undefined') {
-	    log.log(lookup.error);
+	    //log.log(lookup.error);
 	    return '';
 	} else {
 	    switch(typeof lookup.value) {
