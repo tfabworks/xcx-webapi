@@ -1,14 +1,17 @@
 {
   "en": {
     "webapiExtension.name": "WebAPI Extension",
-    "webapiExtension.doIt": "do it [SCRIPT]"
+      "webapiExtension.getWebapiJsonContents": "get [URL] and name as [NAME]",
+    "webapiExtension.readWebapiJsonContents": "read [QUERY] from [NAME]"
   },
   "ja": {
     "webapiExtension.name": "WebAPI Extension",
-    "webapiExtension.doIt": "[SCRIPT] を実行する"
+    "webapiExtension.getWebapiJsonContents": "[URL] からデータを取得して [NAME] と名付ける",
+    "webapiExtension.readWebapiJsonContents": "[NAME] から [QUERY] を取り出す"
   },
   "ja-Hira": {
     "webapiExtension.name": "WebAPI Extension",
-    "webapiExtension.doIt": "[SCRIPT] をじっこうする"
+    "webapiExtension.getWebapiJsonContents": "[URL] からデータをとって [NAME] というなまえにする",
+    "webapiExtension.readWebapiJsonContents": "[NAME] から [QUERY] をとりだす"
   }
 }

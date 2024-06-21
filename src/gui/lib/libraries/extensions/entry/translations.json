@@ -1,14 +1,14 @@
 {
   "en": {
     "webapiExtension.entry.name": "WebAPI Extension",
-    "webapiExtension.entry.description": "Description of this extension"
+    "webapiExtension.entry.description": "Retrive data from the Web and access it."
   },
   "ja": {
     "webapiExtension.entry.name": "WebAPI Extension",
-    "webapiExtension.entry.description": "拡張機能の説明"
+    "webapiExtension.entry.description": "Webからデータを取得して中の情報を取り出します。"
   },
   "ja-Hira": {
     "webapiExtension.entry.name": "WebAPI Extension",
-    "webapiExtension.entry.description": "かくちょうきのうのせつめい"
+    "webapiExtension.entry.description": "ウェブからデータをとってきてなかみをとりだします。"
   }
 }
