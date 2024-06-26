@@ -5,7 +5,7 @@ An example extension for [Xcratch](https://xcratch.github.io/)
 This extension add extra-block "do it", that executes string in its input field as a sentence in Javascript and return the result.
 
 
-# JSONへのアクセス方法
+## JSONへのアクセス方法
 
 * ドット(.)区切りでオブジェクトのキーを列挙
 * リストの場合はインデックス番号を全角,半角数字で指定可能, firstは0, lastは最後の要素
