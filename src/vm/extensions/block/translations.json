@@ -1,17 +1,17 @@
 {
   "en": {
-    "webapiExtension.name": "WebAPI Extension",
-      "webapiExtension.getWebapiJsonContents": "get [URL] and name as [NAME]",
-    "webapiExtension.readWebapiJsonContents": "read [QUERY] from [NAME]"
+    "webapiExtension.name": "WebAPI Client",
+    "webapiExtension.getWebapiJsonContents": "Retrieve data from [URL] and store in [NAME]",
+    "webapiExtension.readWebapiJsonContents": "Value of [QUERY] in [NAME]"
   },
   "ja": {
-    "webapiExtension.name": "WebAPI Extension",
-    "webapiExtension.getWebapiJsonContents": "[URL] からデータを取得して [NAME] と名付ける",
-    "webapiExtension.readWebapiJsonContents": "[NAME] から [QUERY] を取り出す"
+    "webapiExtension.name": "WebAPIクライアント",
+    "webapiExtension.getWebapiJsonContents": "[URL] からデータを取得し [NAME] に保存",
+    "webapiExtension.readWebapiJsonContents": "[NAME] の [QUERY] の値"
   },
   "ja-Hira": {
-    "webapiExtension.name": "WebAPI Extension",
-    "webapiExtension.getWebapiJsonContents": "[URL] からデータをとって [NAME] というなまえにする",
-    "webapiExtension.readWebapiJsonContents": "[NAME] から [QUERY] をとりだす"
+    "webapiExtension.name": "WebAPIクライアント",
+    "webapiExtension.getWebapiJsonContents": "[URL] からデータをしゅとくし [NAME] にほぞん",
+    "webapiExtension.readWebapiJsonContents": "[NAME] の [QUERY] のあたい"
   }
 }

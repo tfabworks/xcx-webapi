@@ -1,3 +1,10 @@
+# WebAPI Client
+
+An example extension for [Xcratch](https://xcratch.github.io/)
+
+This extension add extra-block "do it", that executes string in its input field as a sentence in Javascript and return the result.
+
+
 # JSONへのアクセス方法
 
 * ドット(.)区切りでオブジェクトのキーを列挙
@@ -12,16 +19,9 @@
 .hourly.[temperature_2m].５
 ```
 
-# WebAPI Extension
-
-An example extension for [Xcratch](https://xcratch.github.io/)
-
-This extension add extra-block "do it", that executes string in its input field as a sentence in Javascript and return the result.
-
-
 ## ✨ What You Can Do With This Extension
 
-Play [Example Project](https://xcratch.github.io/editor/#https://tfabworks.github.io/xcx-webapi/projects/example.sb3) to look at what you can do with "WebAPI Extension" extension. 
+Play [Example Project](https://xcratch.github.io/editor/#https://tfabworks.github.io/xcx-webapi/projects/example.sb3) to look at what you can do with "WebAPI Client" extension.
 <iframe src="https://xcratch.github.io/editor/player#https://tfabworks.github.io/xcx-webapi/projects/example.sb3" width="540px" height="460px"></iframe>
 
 

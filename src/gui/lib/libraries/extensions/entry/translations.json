@@ -1,14 +1,14 @@
 {
   "en": {
-    "webapiExtension.entry.name": "WebAPI Extension",
-    "webapiExtension.entry.description": "Retrive data from the Web and access it."
+    "webapiExtension.entry.name": "WebAPI Client",
+    "webapiExtension.entry.description": "Retrieve values from WebAPI."
   },
   "ja": {
-    "webapiExtension.entry.name": "WebAPI Extension",
-    "webapiExtension.entry.description": "Webからデータを取得して中の情報を取り出します。"
+    "webapiExtension.entry.name": "WebAPIクライアント",
+    "webapiExtension.entry.description": "WebAPIの値を取得する。"
   },
   "ja-Hira": {
-    "webapiExtension.entry.name": "WebAPI Extension",
-    "webapiExtension.entry.description": "ウェブからデータをとってきてなかみをとりだします。"
+    "webapiExtension.entry.name": "WebAPIクライアント",
+    "webapiExtension.entry.description": "WebAPIのあたいをしゅとくする。"
   }
 }

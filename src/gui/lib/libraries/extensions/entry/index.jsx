@@ -18,13 +18,13 @@ const entry = {
     get name () {
         return formatMessage({
             id: 'webapiExtension.entry.name',
-            defaultMessage: 'WebAPI Extension',
+            defaultMessage: 'WebAPI Client',
             description: 'name of the extension'
         });
     },
     extensionId: 'webapiExtension',
     extensionURL: 'https://tfabworks.github.io/xcx-webapi/dist/webapiExtension.mjs',
-    collaborator: 'tfabworks',
+    collaborator: 'TFabWorks',
     iconURL: iconURL,
     insetIconURL: insetIconURL,
     get description () {

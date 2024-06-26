@@ -54,7 +54,7 @@ class ExtensionBlocks {
     static get EXTENSION_NAME () {
         return formatMessage({
             id: 'webapiExtension.name',
-            default: 'WebAPI Extension',
+            default: 'WebAPI Client',
             description: 'name of the extension'
         });
     }
@@ -84,7 +84,7 @@ class ExtensionBlocks {
     }
 
     /**
-     * Construct a set of blocks for WebAPI Extension.
+     * Construct a set of blocks for WebAPI Client.
      * @param {Runtime} runtime - the Scratch 3.0 runtime.
      */
     constructor (runtime) {
@@ -120,8 +120,8 @@ class ExtensionBlocks {
                     blockAllThreads: false,
                     text: formatMessage({
                         id: 'webapiExtension.getWebapiJsonContents',
-                        default: 'get [URL] and name as [NAME]',
-                        description: 'retrive json contents from specified URL'
+                        default: 'Retrieve data from [URL] and store in [NAME]',
+                        description: 'Retrieve data from URL and store in NAME'
                     }),
                     func: 'getWebapiJsonContents',
                     arguments: {
@@ -141,8 +141,8 @@ class ExtensionBlocks {
                     blockAllThreads: false,
                     text: formatMessage({
                         id: 'webapiExtension.readWebapiJsonContents',
-                        default: 'read [QUERY] from [NAME]',
-                        description: 'read json contents by name'
+                        default: 'Value of [QUERY] in [NAME]',
+                        description: 'Value of QUERY in NAME'
                     }),
                     func: 'readWebapiJsonContents',
                     arguments: {
