@@ -1,14 +1,14 @@
 {
   "en": {
-    "webapiExtension.entry.name": "WebAPI Client",
+    "webapiExtension.entry.name": "DATA Tool",
     "webapiExtension.entry.description": "Retrieve values from WebAPI."
   },
   "ja": {
-    "webapiExtension.entry.name": "WebAPIクライアント",
+    "webapiExtension.entry.name": "DATA Tool",
     "webapiExtension.entry.description": "WebAPIの値を取得する。"
   },
   "ja-Hira": {
-    "webapiExtension.entry.name": "WebAPIクライアント",
+    "webapiExtension.entry.name": "DATA Tool",
     "webapiExtension.entry.description": "WebAPIのあたいをしゅとくする。"
   }
 }

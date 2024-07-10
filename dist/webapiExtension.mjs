@@ -3,18 +3,18 @@ var img$2 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAF0CAIAAABwgtBbA
 var img$1 = "data:image/svg+xml,%3c%3fxml version='1.0' encoding='utf-8'%3f%3e%3c!-- Generator: Adobe Illustrator 26.3.1%2c SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3e%3csvg version='1.1' id='%e3%83%ac%e3%82%a4%e3%83%a4%e3%83%bc_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 40 40' enable-background='new 0 0 40 40' xml:space='preserve'%3e%3cg%3e %3cpath fill='white' d='M12.912%2c18.56c-0.009%2c0.002-0.019%2c0.003-0.028%2c0.005l-4.376%2c0.806c-0.987%2c0.182-1.934-0.47-2.117-1.456 L4.553%2c8.026C4.37%2c7.042%2c5.018%2c6.095%2c6.001%2c5.908l4.064-0.773C12.288%2c4.72%2c14.103%2c5%2c15.468%2c5.966 c1.314%2c0.919%2c2.184%2c2.457%2c2.578%2c4.566c0.419%2c2.239%2c0.142%2c4.087-0.823%2c5.491C16.319%2c17.341%2c14.868%2c18.194%2c12.912%2c18.56z M11.197%2c13.71l0.115-0.022c0.859-0.161%2c1.219-0.404%2c1.289-0.511c0.025-0.036%2c0.258-0.396%2c0.001-1.645 c-0.227-1.102-0.521-1.358-0.524-1.361c-0.034-0.021-0.373-0.186-1.483%2c0.022l-0.054%2c0.01L11.197%2c13.71z'/%3e %3cpath fill='%23606060' d='M12.555%2c16.777l-4.377%2c0.806L6.341%2c7.695l4.063-0.773c1.722-0.322%2c3.059-0.146%2c4.013%2c0.529 c0.922%2c0.646%2c1.536%2c1.785%2c1.841%2c3.416C16.889%2c14.236%2c15.654%2c16.206%2c12.555%2c16.777z M10.26%2c8.407L8.419%2c8.751l1.324%2c7.081 l1.903-0.356c1.228-0.23%2c2.051-0.661%2c2.47-1.293c0.456-0.665%2c0.544-1.671%2c0.267-3.017c-0.27-1.305-0.718-2.151-1.344-2.537 C12.455%2c8.243%2c11.529%2c8.17%2c10.26%2c8.407z'/%3e%3c/g%3e%3cg%3e %3cpath fill='white' d='M29.822%2c18.245l-1.406-0.515c-0.515-0.189-0.86-0.676-0.867-1.224l-0.014-1.173l-1.304-0.482l-0.785%2c0.892 c-0.36%2c0.41-0.934%2c0.556-1.446%2c0.369l-1.355-0.496c-0.414-0.152-0.725-0.5-0.829-0.929c-0.104-0.428%2c0.013-0.88%2c0.311-1.205 l5.336-5.806c0.361-0.394%2c0.924-0.53%2c1.426-0.347l1.483%2c0.543c0.5%2c0.183%2c0.841%2c0.649%2c0.865%2c1.18l0.357%2c7.891 c0.02%2c0.441-0.183%2c0.863-0.538%2c1.125C30.701%2c18.331%2c30.237%2c18.397%2c29.822%2c18.245z'/%3e %3cpath fill='%23606060' d='M25.838%2c13.298l-1.384%2c1.574L23.1%2c14.376l5.336-5.806l1.483%2c0.543l0.357%2c7.891l-1.406-0.515l-0.025-2.081 L25.838%2c13.298z M28.829%2c13.284L28.8%2c10.045l-0.086-0.031l-2.14%2c2.445L28.829%2c13.284z'/%3e%3c/g%3e%3cg%3e %3cpath fill='white' d='M31.721%2c30.103l-1.342%2c0.587c-0.492%2c0.215-1.064%2c0.104-1.44-0.279l-0.803-0.819l-1.247%2c0.542l0.049%2c1.161 c0.023%2c0.533-0.284%2c1.025-0.773%2c1.239L24.873%2c33.1c-0.395%2c0.173-0.851%2c0.137-1.214-0.095c-0.363-0.232-0.586-0.631-0.595-1.062 l-0.157-7.711c-0.011-0.523%2c0.294-1%2c0.773-1.21l1.415-0.619c0.477-0.209%2c1.033-0.111%2c1.41%2c0.249l5.59%2c5.334 c0.312%2c0.298%2c0.455%2c0.734%2c0.38%2c1.159C32.401%2c29.57%2c32.117%2c29.93%2c31.721%2c30.103z'/%3e %3cpath fill='%23606060' d='M25.561%2c29.303l0.087%2c2.048l-1.293%2c0.566l-0.157-7.711l1.416-0.619l5.59%2c5.334l-1.342%2c0.587l-1.425-1.453 L25.561%2c29.303z M27.665%2c27.271l-2.211-2.269l-0.082%2c0.036l0.141%2c3.175L27.665%2c27.271z'/%3e%3c/g%3e%3cg%3e %3cpath fill='white' d='M11.168%2c34.098L9.79%2c33.807c-0.729-0.154-1.195-0.87-1.041-1.599l1.028-4.869l-1.309-0.276 c-0.729-0.154-1.195-0.87-1.041-1.599l0.231-1.095c0.154-0.729%2c0.87-1.195%2c1.599-1.041l6.682%2c1.411 c0.729%2c0.154%2c1.195%2c0.87%2c1.041%2c1.599l-0.231%2c1.095c-0.154%2c0.729-0.87%2c1.195-1.599%2c1.041l-1.354-0.286l-1.028%2c4.869 C12.614%2c33.786%2c11.897%2c34.252%2c11.168%2c34.098z'/%3e %3cpath fill='%23606060' d='M12.754%2c26.589l-1.307%2c6.189l-1.378-0.291l1.307-6.189l-2.629-0.555l0.231-1.095l6.682%2c1.411l-0.231%2c1.095 L12.754%2c26.589z'/%3e%3c/g%3e%3c/svg%3e";
 
 var en$1 = {
-	"webapiExtension.entry.name": "WebAPI Client",
+	"webapiExtension.entry.name": "DATA Tool",
 	"webapiExtension.entry.description": "Retrieve values from WebAPI."
 };
 var ja$1 = {
-	"webapiExtension.entry.name": "WebAPIクライアント",
+	"webapiExtension.entry.name": "DATA Tool",
 	"webapiExtension.entry.description": "WebAPIの値を取得する。"
 };
 var translations$1 = {
 	en: en$1,
 	ja: ja$1,
 	"ja-Hira": {
-	"webapiExtension.entry.name": "WebAPIクライアント",
+	"webapiExtension.entry.name": "DATA Tool",
 	"webapiExtension.entry.description": "WebAPIのあたいをしゅとくする。"
 }
 };
@@ -1632,22 +1632,22 @@ minilog.enable();
 minilog('vm');
 
 var en = {
-	"webapiExtension.name": "WebAPI Client",
-	"webapiExtension.getWebapiJsonContents": "Retrieve data from [URL] and store in [NAME]",
-	"webapiExtension.readWebapiJsonContents": "Value of [QUERY] in [NAME]"
+	"webapiExtension.name": "DATA Tool",
+	"webapiExtension.getWebContents": "get data from URL [URL]",
+	"webapiExtension.readStringAsJson": "value of [QUERY] in JSON data [VALUE]"
 };
 var ja = {
-	"webapiExtension.name": "WebAPIクライアント",
-	"webapiExtension.getWebapiJsonContents": "[URL] からデータを取得し [NAME] に保存",
-	"webapiExtension.readWebapiJsonContents": "[NAME] の [QUERY] の値"
+	"webapiExtension.name": "DATA Tool",
+	"webapiExtension.getWebContents": "URL [URL] よりデータを取得する",
+	"webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] の値"
 };
 var translations = {
 	en: en,
 	ja: ja,
 	"ja-Hira": {
-	"webapiExtension.name": "WebAPIクライアント",
-	"webapiExtension.getWebapiJsonContents": "[URL] からデータをしゅとくし [NAME] にほぞん",
-	"webapiExtension.readWebapiJsonContents": "[NAME] の [QUERY] のあたい"
+	"webapiExtension.name": "DATA Tool",
+	"webapiExtension.getWebContents": "URL [URL] よりデータをしゅとくする",
+	"webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] のあたい"
 }
 };
 
@@ -1700,7 +1700,6 @@ var ExtensionBlocks = /*#__PURE__*/function () {
       // Replace 'formatMessage' to a formatter which is used in the runtime.
       formatMessage = runtime.formatMessage;
     }
-    this.responseData = {};
   }
 
   /**
@@ -1717,43 +1716,39 @@ var ExtensionBlocks = /*#__PURE__*/function () {
         blockIconURI: img,
         showStatusButton: false,
         blocks: [{
-          opcode: 'getWebapiJsonContents',
-          blockType: BlockType$1.COMMAND,
+          opcode: 'getWebContents',
+          blockType: BlockType$1.REPORTER,
           blockAllThreads: false,
           text: formatMessage({
-            id: 'webapiExtension.getWebapiJsonContents',
-            default: 'Retrieve data from [URL] and store in [NAME]',
-            description: 'Retrieve data from URL and store in NAME'
+            id: 'webapiExtension.getWebContents',
+            default: 'get data from URL [URL]',
+            description: 'get data from URL'
           }),
-          func: 'getWebapiJsonContents',
+          func: 'getWebContents',
           arguments: {
             URL: {
               type: ArgumentType$1.STRING,
               defaultValue: 'https://httpbin.org/get'
-            },
-            NAME: {
-              type: ArgumentType$1.STRING,
-              defaultValue: 'DATA'
             }
           }
         }, {
-          opcode: 'readWebapiJsonContents',
+          opcode: 'readStringAsJson',
           blockType: BlockType$1.REPORTER,
           blockAllThreads: false,
           text: formatMessage({
-            id: 'webapiExtension.readWebapiJsonContents',
-            default: 'Value of [QUERY] in [NAME]',
-            description: 'Value of QUERY in NAME'
+            id: 'webapiExtension.readStringAsJson',
+            default: 'value of [QUERY] in JSON data [VALUE]',
+            description: 'value of QUERY in JSON data VALUE'
           }),
-          func: 'readWebapiJsonContents',
+          func: 'readStringAsJson',
           arguments: {
             QUERY: {
               type: ArgumentType$1.STRING,
               defaultValue: '.headers.Referer'
             },
-            NAME: {
+            VALUE: {
               type: ArgumentType$1.STRING,
-              defaultValue: 'DATA'
+              defaultValue: '{}'
             }
           }
         }],
@@ -1761,52 +1756,50 @@ var ExtensionBlocks = /*#__PURE__*/function () {
       };
     }
   }, {
-    key: "getWebapiJsonContents",
+    key: "getWebContents",
     value: function () {
-      var _getWebapiJsonContents = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(args) {
-        var url, name, json;
+      var _getWebContents = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(args) {
+        var url;
         return _regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
               url = Cast$1.toString(args.URL);
-              name = Cast$1.toString(args.NAME);
-              _context.next = 4;
+              _context.next = 3;
               return fetch(url, {
                 mode: 'cors',
                 headers: {
                   'Accept': 'application/json'
                 }
               }).then(function (response) {
-                return response.json();
+                return response.text();
               }).catch(function (e) {});
+            case 3:
+              return _context.abrupt("return", _context.sent);
             case 4:
-              json = _context.sent;
-              //log.log(`getWebapiJsonContents: fetch ${url} to ${name}`);
-              this.responseData[name] = json;
-            case 6:
             case "end":
               return _context.stop();
           }
-        }, _callee, this);
+        }, _callee);
       }));
-      function getWebapiJsonContents(_x) {
-        return _getWebapiJsonContents.apply(this, arguments);
+      function getWebContents(_x) {
+        return _getWebContents.apply(this, arguments);
       }
-      return getWebapiJsonContents;
+      return getWebContents;
     }()
   }, {
-    key: "readWebapiJsonContents",
-    value: function readWebapiJsonContents(args) {
+    key: "readStringAsJson",
+    value: function readStringAsJson(args) {
       var query = Cast$1.toString(args.QUERY);
-      var name = Cast$1.toString(args.NAME);
-      var data = this.responseData[name];
+      var value = Cast$1.toString(args.VALUE);
+      var data = '';
+      try {
+        data = JSON.parse(value);
+      } catch (e) {}
       var keys = query.split('.').map(function (s) {
         return s.trim().replace(/^\[/, '').replace(/\]$/, '');
       }).filter(function (s) {
         return s != '';
       });
-      //log.log(`readWebapiJsonContents: ${query} ${name}`, keys);
-
       var lookup = keys.reduce(function (d, key) {
         switch (_typeof$2(d.value)) {
           case "undefined":

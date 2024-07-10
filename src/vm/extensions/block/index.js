@@ -98,8 +98,6 @@ class ExtensionBlocks {
             // Replace 'formatMessage' to a formatter which is used in the runtime.
             formatMessage = runtime.formatMessage;
         }
-
-	this.responseData = {};
     }
 
     /**
@@ -115,44 +113,40 @@ class ExtensionBlocks {
             showStatusButton: false,
             blocks: [
                 {
-                    opcode: 'getWebapiJsonContents',
-                    blockType: BlockType.COMMAND,
+                    opcode: 'getWebContents',
+                    blockType: BlockType.REPORTER,
                     blockAllThreads: false,
                     text: formatMessage({
-                        id: 'webapiExtension.getWebapiJsonContents',
-                        default: 'Retrieve data from [URL] and store in [NAME]',
-                        description: 'Retrieve data from URL and store in NAME'
+                        id: 'webapiExtension.getWebContents',
+                        default: 'get data from URL [URL]',
+                        description: 'get data from URL'
                     }),
-                    func: 'getWebapiJsonContents',
+                    func: 'getWebContents',
                     arguments: {
                         URL: {
                             type: ArgumentType.STRING,
                             defaultValue: 'https://httpbin.org/get'
-                        },
-                        NAME: {
-                            type: ArgumentType.STRING,
-                            defaultValue: 'DATA'
                         }
                     }
                 },
                 {
-                    opcode: 'readWebapiJsonContents',
+                    opcode: 'readStringAsJson',
                     blockType: BlockType.REPORTER,
                     blockAllThreads: false,
                     text: formatMessage({
-                        id: 'webapiExtension.readWebapiJsonContents',
-                        default: 'Value of [QUERY] in [NAME]',
-                        description: 'Value of QUERY in NAME'
+                        id: 'webapiExtension.readStringAsJson',
+                        default: 'value of [QUERY] in JSON data [VALUE]',
+                        description: 'value of QUERY in JSON data VALUE'
                     }),
-                    func: 'readWebapiJsonContents',
+                    func: 'readStringAsJson',
                     arguments: {
                         QUERY: {
                             type: ArgumentType.STRING,
                             defaultValue: '.headers.Referer'
                         },
-                        NAME: {
+                        VALUE: {
                             type: ArgumentType.STRING,
-                            defaultValue: 'DATA'
+                            defaultValue: '{}'
                         }
                     }
                 }
@@ -162,21 +156,17 @@ class ExtensionBlocks {
         };
     }
 
-    async getWebapiJsonContents(args) {
+    async getWebContents(args) {
         const url = Cast.toString(args.URL);
-        const name = Cast.toString(args.NAME);
-	const json = await(fetch(url, {mode: 'cors', headers: {'Accept': 'application/json'}}).then(response => response.json()).catch(e => {}));
-        //log.log(`getWebapiJsonContents: fetch ${url} to ${name}`);
-	this.responseData[name] = json;
+	return await(fetch(url, {mode: 'cors', headers: {'Accept': 'application/json'}}).then(response => response.text()).catch(e => {}));
     }
 
-    readWebapiJsonContents(args) {
+    readStringAsJson(args) {
         const query = Cast.toString(args.QUERY);
-        const name = Cast.toString(args.NAME);
-	const data = this.responseData[name];
-	const toHalfnums = text => text;
+        const value = Cast.toString(args.VALUE);
+	let data = '';
+	try { data = JSON.parse(value); } catch(e) {}
 	const keys = query.split('.').map(s => s.trim().replace(/^\[/, '').replace(/\]$/, '')).filter(s => s != '');
-        //log.log(`readWebapiJsonContents: ${query} ${name}`, keys);
 
 	const lookup = keys.reduce((d, key) => {
 	    switch(typeof d.value) {
