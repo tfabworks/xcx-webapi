@@ -1790,7 +1790,7 @@ var ExtensionBlocks = /*#__PURE__*/function () {
     key: "readStringAsJson",
     value: function readStringAsJson(args) {
       var query = Cast$1.toString(args.QUERY);
-      var value = Cast$1.toString(args.VALUE);
+      var value = typeof args.VALUE == 'string' ? args.VALUE : Cast$1.toString(args.VALUE);
       var data = '';
       try {
         data = JSON.parse(value);

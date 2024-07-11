@@ -163,7 +163,7 @@ class ExtensionBlocks {
 
     readStringAsJson(args) {
         const query = Cast.toString(args.QUERY);
-        const value = Cast.toString(args.VALUE);
+        const value = typeof args.VALUE == 'string' ? args.VALUE : Cast.toString(args.VALUE);
 	let data = '';
 	try { data = JSON.parse(value); } catch(e) {}
 	const keys = query.split('.').map(s => s.trim().replace(/^\[/, '').replace(/\]$/, '')).filter(s => s != '');
