@@ -1772,7 +1772,9 @@ var ExtensionBlocks = /*#__PURE__*/function () {
                 }
               }).then(function (response) {
                 return response.text();
-              }).catch(function (e) {});
+              }).catch(function (e) {
+                return '';
+              });
             case 3:
               return _context.abrupt("return", _context.sent);
             case 4:

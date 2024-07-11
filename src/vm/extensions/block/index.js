@@ -158,7 +158,7 @@ class ExtensionBlocks {
 
     async getWebContents(args) {
         const url = Cast.toString(args.URL);
-	return await(fetch(url, {mode: 'cors', headers: {'Accept': 'application/json'}}).then(response => response.text()).catch(e => {}));
+	return await(fetch(url, {mode: 'cors', headers: {'Accept': 'application/json'}}).then(response => response.text()).catch(e => ''));
     }
 
     readStringAsJson(args) {
