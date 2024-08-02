@@ -19,10 +19,22 @@ var translations$1 = {
 }
 };
 
-/**
- * This is an extension for Xcratch.
- */
-
+var formatMessage$1 = function formatMessage(messageData) {
+  return messageData.defaultMessage;
+};
+var setFormatter = function setFormatter(formatter) {
+  formatMessage$1 = formatter;
+};
+var message = function message(key) {
+  var id = "".concat(entry.extensionId, ".entry.").concat(key);
+  var defaultMessage = translations$1[id] || translations$1.en[id];
+  var description = "".concat(key, " of the extension");
+  return formatMessage$1({
+    id: id,
+    defaultMessage: defaultMessage,
+    description: description
+  });
+};
 var entry = {
   get name() {
     return message('name');
@@ -42,25 +54,9 @@ var entry = {
   helpLink: 'https://tfabworks.github.io/xcx-webapi/',
   translationMap: translations$1
 };
-var formatMessage$1 = function formatMessage(messageData) {
-  return messageData.defaultMessage;
-};
-var setFormatter = function setFormatter(formatter) {
-  formatMessage$1 = formatter;
-};
-var message = function message(key) {
-  var id = "".concat(entry.extensionId, ".entry.").concat(key);
-  var defaultMessage = translations$1[id] || translations$1.en[id];
-  var description = "".concat(key, " of the extension");
-  return formatMessage$1({
-    id: id,
-    defaultMessage: defaultMessage,
-    description: description
-  });
-};
 
 /**
- * This is an extension for Xcratch.
+ * This is an extension for Xcratch
  */
 setFormatter(function (messageData) {
   return /*#__PURE__*/React.createElement(FormatMessage, {
