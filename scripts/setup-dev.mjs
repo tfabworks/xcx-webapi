@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-'use strict'
-
-import path from 'path';
+import path from 'node:path';
 import fs from 'fs-extra';
 
 // modify for your environment
@@ -13,7 +11,7 @@ const vmRefs = [
 ];
 
 // Make symbolic link
-const makeSymbolicLink = function (to, from) {
+const makeSymbolicLink = (to, from) => {
     try {
         const stats = fs.lstatSync(from);
         if (stats.isSymbolicLink()) {
@@ -32,6 +30,6 @@ const makeSymbolicLink = function (to, from) {
     console.log(`Make link: ${from} -> ${fs.readlinkSync(from)}`);
 }
 
-vmRefs.forEach(dir => {
+for (const dir of vmRefs) {
     makeSymbolicLink(path.resolve(vmSrcOrg, dir), path.resolve(vmSrcDev, dir));
-});
+}
