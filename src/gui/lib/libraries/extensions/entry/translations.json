@@ -1,14 +1,14 @@
 {
   "en": {
-    "webapiExtension.entry.name": "DATA Tool",
-    "webapiExtension.entry.description": "Retrieve values from WebAPI."
+    "datatoolExtension.entry.name": "DATA Tool",
+    "datatoolExtension.entry.description": "Retrieve values from WebAPI."
   },
   "ja": {
-    "webapiExtension.entry.name": "DATA Tool",
-    "webapiExtension.entry.description": "WebAPIの値を取得する。"
+    "datatoolExtension.entry.name": "DATA Tool",
+    "datatoolExtension.entry.description": "WebAPIの値を取得する。"
   },
   "ja-Hira": {
-    "webapiExtension.entry.name": "DATA Tool",
-    "webapiExtension.entry.description": "WebAPIのあたいをしゅとくする。"
+    "datatoolExtension.entry.name": "DATA Tool",
+    "datatoolExtension.entry.description": "WebAPIのあたいをしゅとくする。"
   }
 }

@@ -1,17 +1,17 @@
 {
   "en": {
-    "webapiExtension.name": "DATA Tool",
-    "webapiExtension.getWebContents": "get data from URL [URL]",
-    "webapiExtension.readStringAsJson": "value of [QUERY] in JSON data [VALUE]"
+    "datatoolExtension.name": "DATA Tool",
+    "datatoolExtension.getWebContents": "get data from URL [URL]",
+    "datatoolExtension.readStringAsJson": "value of [QUERY] in JSON data [VALUE]"
   },
   "ja": {
-    "webapiExtension.name": "DATA Tool",
-    "webapiExtension.getWebContents": "URL [URL] よりデータを取得する",
-    "webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] の値"
+    "datatoolExtension.name": "DATA Tool",
+    "datatoolExtension.getWebContents": "URL [URL] よりデータを取得する",
+    "datatoolExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] の値"
   },
   "ja-Hira": {
-    "webapiExtension.name": "DATA Tool",
-    "webapiExtension.getWebContents": "URL [URL] よりデータをしゅとくする",
-    "webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] のあたい"
+    "datatoolExtension.name": "DATA Tool",
+    "datatoolExtension.getWebContents": "URL [URL] よりデータをしゅとくする",
+    "datatoolExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] のあたい"
   }
 }

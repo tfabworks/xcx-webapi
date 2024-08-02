@@ -26,14 +26,14 @@ const setupTranslations = () => {
     }
 };
 
-const EXTENSION_ID = 'webapiExtension';
+const EXTENSION_ID = 'datatoolExtension';
 
 /**
  * URL to get this extension as a module.
  * When it was loaded as a module, 'extensionURL' will be replaced a URL which is retrieved from.
  * @type {string}
  */
-let extensionURL = 'https://tfabworks.github.io/xcx-webapi/dist/webapiExtension.mjs';
+let extensionURL = 'https://tfabworks.github.io/xcx-datatool/dist/datatoolExtension.mjs';
 
 /**
  * Scratch 3.0 blocks for example of Xcratch.
@@ -53,8 +53,8 @@ class ExtensionBlocks {
      */
     static get EXTENSION_NAME () {
         return formatMessage({
-            id: 'webapiExtension.name',
-            default: 'WebAPI Client',
+            id: 'datatoolExtension.name',
+            default: 'DATA Tool',
             description: 'name of the extension'
         });
     }
@@ -84,7 +84,7 @@ class ExtensionBlocks {
     }
 
     /**
-     * Construct a set of blocks for WebAPI Client.
+     * Construct a set of blocks for DATA Tool.
      * @param {Runtime} runtime - the Scratch 3.0 runtime.
      */
     constructor (runtime) {
@@ -117,7 +117,7 @@ class ExtensionBlocks {
                     blockType: BlockType.REPORTER,
                     blockAllThreads: false,
                     text: formatMessage({
-                        id: 'webapiExtension.getWebContents',
+                        id: 'datatoolExtension.getWebContents',
                         default: 'get data from URL [URL]',
                         description: 'get data from URL'
                     }),
@@ -134,7 +134,7 @@ class ExtensionBlocks {
                     blockType: BlockType.REPORTER,
                     blockAllThreads: false,
                     text: formatMessage({
-                        id: 'webapiExtension.readStringAsJson',
+                        id: 'datatoolExtension.readStringAsJson',
                         default: 'value of [QUERY] in JSON data [VALUE]',
                         description: 'value of QUERY in JSON data VALUE'
                     }),

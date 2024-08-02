@@ -18,8 +18,8 @@ const message = (key) => {
 const entry = {
     get name () { return message('name') },
     get description () { return message('description') },
-    extensionId: 'webapiExtension',
-    extensionURL: 'https://tfabworks.github.io/xcx-webapi/dist/webapiExtension.mjs',
+    extensionId: 'datatoolExtension',
+    extensionURL: 'https://tfabworks.github.io/xcx-datatool/dist/datatoolExtension.mjs',
     collaborator: 'TFabWorks',
     iconURL,
     insetIconURL,
@@ -27,7 +27,7 @@ const entry = {
     disabled: false,
     bluetoothRequired: false,
     internetConnectionRequired: false,
-    helpLink: 'https://tfabworks.github.io/xcx-webapi/',
+    helpLink: 'https://tfabworks.github.io/xcx-datatool/',
     translationMap: translations
 };
 

@@ -1,16 +1,16 @@
 #!/bin/sh
 
 ## Install script for https://stretch3.github.io/
-## execute `sh ./xcx-webapi/scripts/stretch3-install.sh`
+## execute `sh ./xcx-datatool/scripts/stretch3-install.sh`
 ## suppoesed dir configuration:
 ##  scratch-gui
-##      - xcx-webapi
+##      - xcx-datatool
 
 LF=$(printf '\\\012_')
 LF=${LF%_}
 
-EXTENSION_REPO=xcx-webapi
-EXTENSION_ID=webapiExtension
+EXTENSION_REPO=xcx-datatool
+EXTENSION_ID=datatoolExtension
 
 # register it as a builtin extenstion
 if ! grep -q -F "builtinExtensions['${EXTENSION_ID}']" node_modules/scratch-vm/src/extension-support/extension-manager.js; then

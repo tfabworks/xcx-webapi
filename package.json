@@ -1,5 +1,5 @@
 {
-  "name": "xcx-webapi",
+  "name": "xcx-datatool",
   "version": "0.0.0",
   "scripts": {
     "setup-dev": "node ./scripts/setup-dev.mjs",
