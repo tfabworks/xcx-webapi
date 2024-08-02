@@ -1,5 +1,5 @@
 /**
- * This is an extension for Xcratch.
+ * This is an extension for Stretch3
  */
 import {entry} from './index-base.jsx';
 
