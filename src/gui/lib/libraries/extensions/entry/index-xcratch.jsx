@@ -1,5 +1,5 @@
 /**
- * This is an extension for Xcratch.
+ * This is an extension for Xcratch
  */
 import {entry, setFormatter} from './index-base.jsx';
 
