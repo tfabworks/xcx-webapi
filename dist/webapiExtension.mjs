@@ -23,46 +23,57 @@ var translations$1 = {
  * This is an extension for Xcratch.
  */
 
-
-/**
- * Formatter to translate the messages in this extension.
- * This will be replaced which is used in the React component.
- * @param {object} messageData - data for format-message
- * @returns {string} - translated message for the current locale
- */
-var formatMessage$1 = function formatMessage(messageData) {
-  return messageData.defaultMessage;
-};
 var entry = {
   get name() {
-    return formatMessage$1({
-      id: 'webapiExtension.entry.name',
-      defaultMessage: 'WebAPI Client',
-      description: 'name of the extension'
-    });
+    return message('name');
+  },
+  get description() {
+    return message('description');
   },
   extensionId: 'webapiExtension',
   extensionURL: 'https://tfabworks.github.io/xcx-webapi/dist/webapiExtension.mjs',
   collaborator: 'TFabWorks',
   iconURL: img$2,
   insetIconURL: img$1,
-  get description() {
-    return formatMessage$1({
-      defaultMessage: 'an extension for Xcratch',
-      description: 'Description for this extension',
-      id: 'webapiExtension.entry.description'
-    });
-  },
   featured: true,
   disabled: false,
   bluetoothRequired: false,
   internetConnectionRequired: false,
   helpLink: 'https://tfabworks.github.io/xcx-webapi/',
-  setFormatMessage: function setFormatMessage(formatter) {
-    formatMessage$1 = formatter;
-  },
   translationMap: translations$1
 };
+var formatMessage$1 = function formatMessage(messageData) {
+  return messageData.defaultMessage;
+};
+var setFormatter = function setFormatter(formatter) {
+  formatMessage$1 = formatter;
+};
+var message = function message(key) {
+  var id = "".concat(entry.extensionId, ".entry.").concat(key);
+  var defaultMessage = translations$1[id] || translations$1.en[id];
+  var description = "".concat(key, " of the extension");
+  return formatMessage$1({
+    id: id,
+    defaultMessage: defaultMessage,
+    description: description
+  });
+};
+
+/**
+ * This is an extension for Xcratch.
+ */
+setFormatter(function (messageData) {
+  return /*#__PURE__*/React.createElement(FormatMessage, {
+    id: messageData.id,
+    defaultMessage: messageData.defaultMessage,
+    description: messageData.description
+  });
+});
+Object.assign(entry, {
+  setFormatMessage: function setFormatMessage(formatter) {
+    return setFormatter(formatter);
+  }
+});
 
 function _typeof$2(o) {
   "@babel/helpers - typeof";
