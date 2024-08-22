@@ -5,10 +5,10 @@
   },
   "ja": {
     "webapiExtension.entry.name": "DATA Tool",
-    "webapiExtension.entry.description": "WebAPIの値を取得する。"
+    "webapiExtension.entry.description": "WebAPIで天気予報等を取得する。"
   },
   "ja-Hira": {
     "webapiExtension.entry.name": "DATA Tool",
-    "webapiExtension.entry.description": "WebAPIのあたいをしゅとくする。"
+    "webapiExtension.entry.description": "WebAPIでてんきようほうなどをしゅとくする。"
   }
 }
