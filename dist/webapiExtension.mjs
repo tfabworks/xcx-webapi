@@ -8,14 +8,14 @@ var en$1 = {
 };
 var ja$1 = {
 	"webapiExtension.entry.name": "DATA Tool",
-	"webapiExtension.entry.description": "WebAPIの値を取得する。"
+	"webapiExtension.entry.description": "WebAPIで天気予報等を取得する。"
 };
 var translations$1 = {
 	en: en$1,
 	ja: ja$1,
 	"ja-Hira": {
 	"webapiExtension.entry.name": "DATA Tool",
-	"webapiExtension.entry.description": "WebAPIのあたいをしゅとくする。"
+	"webapiExtension.entry.description": "WebAPIでてんきようほうなどをしゅとくする。"
 }
 };
 
@@ -27,7 +27,7 @@ var setFormatter = function setFormatter(formatter) {
 };
 var message = function message(key) {
   var id = "".concat(entry.extensionId, ".entry.").concat(key);
-  var defaultMessage = translations$1[id] || translations$1.en[id];
+  var defaultMessage = translations$1[id] || translations$1.ja[id];
   var description = "".concat(key, " of the extension");
   return formatMessage$1({
     id: id,
@@ -50,7 +50,7 @@ var entry = {
   featured: true,
   disabled: false,
   bluetoothRequired: false,
-  internetConnectionRequired: false,
+  internetConnectionRequired: true,
   helpLink: 'https://tfabworks.github.io/xcx-webapi/',
   translationMap: translations$1
 };
@@ -58,13 +58,6 @@ var entry = {
 /**
  * This is an extension for Xcratch
  */
-setFormatter(function (messageData) {
-  return /*#__PURE__*/React.createElement(FormatMessage, {
-    id: messageData.id,
-    defaultMessage: messageData.defaultMessage,
-    description: messageData.description
-  });
-});
 Object.assign(entry, {
   setFormatMessage: function setFormatMessage(formatter) {
     return setFormatter(formatter);
@@ -572,10 +565,8 @@ var ArgumentType = {
 var argumentType = ArgumentType;
 var ArgumentType$1 = /*@__PURE__*/getDefaultExportFromCjs(argumentType);
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function _classCallCheck(a, n) {
+  if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
 }
 
 function _typeof(o) {
@@ -601,24 +592,19 @@ function toPrimitive(t, r) {
 
 function toPropertyKey(t) {
   var i = toPrimitive(t, "string");
-  return "symbol" == _typeof(i) ? i : String(i);
+  return "symbol" == _typeof(i) ? i : i + "";
 }
 
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, toPropertyKey(descriptor.key), descriptor);
+function _defineProperties(e, r) {
+  for (var t = 0; t < r.length; t++) {
+    var o = r[t];
+    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, toPropertyKey(o.key), o);
   }
 }
-function _createClass(Constructor, protoProps, staticProps) {
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  Object.defineProperty(Constructor, "prototype", {
-    writable: false
-  });
-  return Constructor;
+function _createClass(e, r, t) {
+  return t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
+    writable: !1
+  }), e;
 }
 
 var Color$1 = /*#__PURE__*/function () {
@@ -903,11 +889,6 @@ var Cast = /*#__PURE__*/function () {
         }
         return value;
       }
-      // Replace full-width numbers with half-width ones.
-      value = value.replace(/[０-９＋．ｅ]/g, function (s) {
-        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
-      });
-      value = value.replace(/[-－﹣−‐⁃‑‒–—﹘―⎯⏤ーｰ─━]/g, '-');
       var n = Number(value);
       if (Number.isNaN(n)) {
         // Scratch treats NaN as 0, when needed as a number.
@@ -951,7 +932,7 @@ var Cast = /*#__PURE__*/function () {
   }, {
     key: "toString",
     value: function toString(value) {
-      return String(value).replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+      return String(value);
     }
 
     /**
@@ -1022,8 +1003,8 @@ var Cast = /*#__PURE__*/function () {
       if (isNaN(n1) || isNaN(n2)) {
         // At least one argument can't be converted to a number.
         // Scratch compares strings as case insensitive.
-        var s1 = Cast.toString(v1).toLowerCase();
-        var s2 = Cast.toString(v2).toLowerCase();
+        var s1 = String(v1).toLowerCase();
+        var s2 = String(v2).toLowerCase();
         if (s1 < s2) {
           return -1;
         } else if (s1 > s2) {
