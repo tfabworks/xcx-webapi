@@ -10,7 +10,7 @@ const setFormatter = formatter => {
 
 const message = (key) => {
     const id = `${entry.extensionId}.entry.${key}`
-    const defaultMessage = translations[id] || translations.en[id]
+    const defaultMessage = translations[id] || translations.ja[id]
     const description = `${key} of the extension`
     return formatMessage({id, defaultMessage, description})
 };
@@ -26,7 +26,7 @@ const entry = {
     featured: true,
     disabled: false,
     bluetoothRequired: false,
-    internetConnectionRequired: false,
+    internetConnectionRequired: true,
     helpLink: 'https://tfabworks.github.io/xcx-webapi/',
     translationMap: translations
 };
