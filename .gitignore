@@ -5,3 +5,4 @@ src/vm/*
 !src/vm/.*
 
 /dist/*.mjs.map
+/scratch-gui*
