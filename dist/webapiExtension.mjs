@@ -108,7 +108,7 @@ function toPrimitive$1(t, r) {
   if ("object" != _typeof$2(t) || !t) return t;
   var e = t[Symbol.toPrimitive];
   if (void 0 !== e) {
-    var i = e.call(t, r );
+    var i = e.call(t, r);
     if ("object" != _typeof$2(i)) return i;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
@@ -144,11 +144,11 @@ var _typeof$1 = {exports: {}};
   function _typeof(o) {
     "@babel/helpers - typeof";
 
-    return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
       return typeof o;
     } : function (o) {
       return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-    }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
+    }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof(o);
   }
   module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 })(_typeof$1);
@@ -583,7 +583,7 @@ function toPrimitive(t, r) {
   if ("object" != _typeof(t) || !t) return t;
   var e = t[Symbol.toPrimitive];
   if (void 0 !== e) {
-    var i = e.call(t, r );
+    var i = e.call(t, r);
     if ("object" != _typeof(i)) return i;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
@@ -1289,30 +1289,30 @@ var filter = Filter;
   var log = new Transform(),
     slice = Array.prototype.slice;
   exports = module.exports = function create(name) {
-    var o = function o() {
+    var _o = function o() {
       log.write(name, undefined, slice.call(arguments));
-      return o;
+      return _o;
     };
-    o.debug = function () {
+    _o.debug = function () {
       log.write(name, 'debug', slice.call(arguments));
-      return o;
+      return _o;
     };
-    o.info = function () {
+    _o.info = function () {
       log.write(name, 'info', slice.call(arguments));
-      return o;
+      return _o;
     };
-    o.warn = function () {
+    _o.warn = function () {
       log.write(name, 'warn', slice.call(arguments));
-      return o;
+      return _o;
     };
-    o.error = function () {
+    _o.error = function () {
       log.write(name, 'error', slice.call(arguments));
-      return o;
+      return _o;
     };
-    o.log = o.debug; // for interface compliance with Node and browser consoles
-    o.suggest = exports.suggest;
-    o.format = log.format;
-    return o;
+    _o.log = _o.debug; // for interface compliance with Node and browser consoles
+    _o.suggest = exports.suggest;
+    _o.format = log.format;
+    return _o;
   };
 
   // filled in separately
@@ -1746,7 +1746,7 @@ var ExtensionBlocks = /*#__PURE__*/function () {
   }, {
     key: "getWebContents",
     value: function () {
-      var _getWebContents = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(args) {
+      var _getWebContents = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime.mark(function _callee(args) {
         var url;
         return _regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
