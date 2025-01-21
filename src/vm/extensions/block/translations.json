@@ -2,16 +2,28 @@
   "en": {
     "webapiExtension.name": "DATA Tool",
     "webapiExtension.getWebContents": "get data from URL [URL]",
-    "webapiExtension.readStringAsJson": "value of [QUERY] in JSON data [VALUE]"
+    "webapiExtension.readStringAsJson": "value of [QUERY] in JSON data [VALUE]",
+    "webapiExtension.parseCsv": "value of row [ROW] column [COL] in CSV data [CSV] with [SEP] separator",
+    "webapiExtension.parseCsv.sep.comma": "comma",
+    "webapiExtension.parseCsv.sep.tab": "tab",
+    "webapiExtension.parseCsv.sep.space": "space"
   },
   "ja": {
     "webapiExtension.name": "DATA Tool",
     "webapiExtension.getWebContents": "URL [URL] よりデータを取得する",
-    "webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] の値"
+    "webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] の値",
+    "webapiExtension.parseCsv": "CSVデータ [CSV] の [ROW]行 [COL]列目の値 [SEP]区切り",
+    "webapiExtension.parseCsv.sep.comma": "カンマ",
+    "webapiExtension.parseCsv.sep.tab": "タブ",
+    "webapiExtension.parseCsv.sep.space": "スペース"
   },
   "ja-Hira": {
     "webapiExtension.name": "DATA Tool",
     "webapiExtension.getWebContents": "URL [URL] よりデータをしゅとくする",
-    "webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] のあたい"
+    "webapiExtension.readStringAsJson": "JSONデータ [VALUE] の [QUERY] のあたい",
+    "webapiExtension.parseCsv": "CSVデータ [CSV] の  [ROW]ぎょう [COL]れつめのあたい [SEP]くぎり",
+    "webapiExtension.parseCsv.sep.comma": "かんま",
+    "webapiExtension.parseCsv.sep.tab": "たぶ",
+    "webapiExtension.parseCsv.sep.space": "すぺーす"
   }
 }

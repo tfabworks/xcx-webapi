@@ -34,5 +34,8 @@
     "rollup": "^4.24.4",
     "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-polyfill-node": "^0.13.0"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.1"
   }
 }
