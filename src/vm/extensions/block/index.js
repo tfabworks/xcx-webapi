@@ -266,8 +266,8 @@ class ExtensionBlocks {
      */
     parseCsv(args, util) {
         const csvInput = args.CSV;
-        const row = Math.floor(Math.max(1, Cast.toNumber(args.ROW)));
-        const col = Math.floor(Math.max(1, Cast.toNumber(args.COL)));
+        const row = Math.floor(Cast.toNumber(args.ROW));
+        const col = Math.floor(Cast.toNumber(args.COL));
         const sep = Cast.toString(args.SEP);
         let lines = null;
         // まず行に分割する
