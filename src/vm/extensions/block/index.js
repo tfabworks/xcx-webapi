@@ -4,6 +4,7 @@ import Cast from '../../util/cast';
 import log from '../../util/log';
 import translations from './translations.json';
 import blockIcon from './block-icon.png';
+import Papa from 'papaparse';
 
 /**
  * Formatter which is used for translation.
@@ -18,6 +19,7 @@ let formatMessage = messageData => messageData.default;
  */
 const setupTranslations = () => {
     const localeSetup = formatMessage.setup();
+    // biome-ignore lint/complexity/useOptionalChain: <explanation>
     if (localeSetup && localeSetup.translations[localeSetup.locale]) {
         Object.assign(
             localeSetup.translations[localeSetup.locale],
@@ -149,9 +151,46 @@ class ExtensionBlocks {
                             defaultValue: '{}'
                         }
                     }
+                },
+                {
+                    opcode: 'parseCsv',
+                    func: 'parseCsv',
+                    blockType: BlockType.REPORTER,
+                    blockAllThreads: false,
+                    text: formatMessage({
+                        id: 'webapiExtension.parseCsv',
+                        default: translations.en['webapiExtension.parseCsv'],
+                        description: translations.en['webapiExtension.parseCsv']
+                    }),
+                    arguments: {
+                        CSV: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'A1,B1,C1'
+                        },
+                        ROW: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 1
+                        },
+                        COL: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 2
+                        },
+                        SEP: {
+                            type: ArgumentType.STRING,
+                            defaultValue: ',',
+                            menu: 'parseCsv_menu_SEP'
+                        }
+                    }
                 }
             ],
             menus: {
+                'parseCsv_menu_SEP': {
+                    items: [
+                        {value: ',', text: formatMessage({id: 'webapiExtension.parseCsv.sep.comma', default: translations.en['webapiExtension.parseCsv.sep.comma']})},
+                        {value: '\t', text: formatMessage({id: 'webapiExtension.parseCsv.sep.tab', default: translations.en['webapiExtension.parseCsv.sep.tab']})},
+                        {value: ' ', text: formatMessage({id: 'webapiExtension.parseCsv.sep.space', default: translations.en['webapiExtension.parseCsv.sep.space']})}
+                    ]
+                }
             }
         };
     }
@@ -213,6 +252,75 @@ class ExtensionBlocks {
 		return JSON.stringify(lookup.value, null, 2);
 	    }
 	}
+    }
+
+    /**
+     * Parse CSV data.
+     * @param {object} args - arguments
+     * @param {string|Array<string|Array<string>>} args.CSV - CSV data
+     * @param {number} args.ROW - row number
+     * @param {number} args.COL - column number
+     * @param {string} args.SEP - separator
+     * @param {object} util - utility object
+     * @returns {string} - parsed CSV data
+     */
+    parseCsv(args, util) {
+        const csvInput = args.CSV;
+        const row = Math.floor(Math.max(1, Cast.toNumber(args.ROW)));
+        const col = Math.floor(Math.max(1, Cast.toNumber(args.COL)));
+        const sep = Cast.toString(args.SEP);
+        let lines = null;
+        // まず行に分割する
+        if(Array.isArray(csvInput)) {
+            // 配列の場合はそのまま
+            lines = csvInput;
+        } else {
+            const csvString = Cast.toString(csvInput);
+            // JSON文字列ぽい場合はパースを試す
+            if(/^\[.*\]$/s.test(csvString.trim())) {
+                try {
+                    const json = JSON.parse(csvString);
+                    if(Array.isArray(json)) {
+                        lines = json;
+                    }
+                } catch(e) {
+                    // 無視
+                }
+            }
+            if(lines === null) {
+                lines = csvString.split(/(?:\r\n|\r|\n)/);
+            }
+        }
+        // ターゲット行を取得
+        if(typeof lines[row - 1] === 'undefined') {
+            return '';
+        }
+        const line = lines[row - 1];
+        // ターゲット行をパース
+        const cols = []
+        if(Array.isArray(line)) {
+            cols.push(...line);
+        } else {
+            const lineString = Cast.toString(line);
+            try {
+                const parsed = Papa.parse(lineString, {header: false, delimiter: sep});
+                if(parsed.errors.length > 0) {
+                    return new Error(parsed.errors[0].message, {cause: parsed.errors});
+                }
+                if(parsed.data.length > 0) {
+                    cols.push(...parsed.data[0]);
+                }
+            } catch(e) {
+                console.error(e);
+                return e;
+            }
+        }
+        // ターゲット列の値を取得
+        if(typeof cols[col - 1] === 'undefined') {
+            return '';
+        }
+        const value = cols[col - 1];
+        return value;
     }
 }
 
